@@ -7,7 +7,6 @@ import java.time.Instant;
 
 public class AuditingEntityListener {
     @PrePersist
-
     void preCreate(AbstractEntity auditable) {
         Instant now = Instant.now();
         auditable.setCreatedDate(now);
@@ -15,7 +14,6 @@ public class AuditingEntityListener {
     }
 
     @PreUpdate
-
     void preUpdate(AbstractEntity auditable) {
         Instant now = Instant.now();
         auditable.setLastModifiedDate(now);
