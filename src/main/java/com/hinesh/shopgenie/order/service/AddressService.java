@@ -8,6 +8,10 @@ import javax.enterprise.context.ApplicationScoped;
 @ApplicationScoped
 public class AddressService {
 
+    private AddressService() {
+        // Private Constructor
+    }
+
     public static Address createFromDto(AddressDto addressDto) {
         return new Address(
                 addressDto.getAddress1(),
